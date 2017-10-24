@@ -11,8 +11,11 @@ def main():
 
 def alphabetically_first_county(counties):
     """Return the county with the name that comes first alphabetically."""
-
-
+    first = counties[0]["County"]
+    for c in counties:
+        if c["County"] < first:
+            first = c["County"]
+       return first
 def county_most_under_18(counties):
     """Return the name and state of a county ("<county name>, <state>") with the highest percent of under 18 year olds."""
 
